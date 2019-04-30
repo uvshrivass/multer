@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Multer Example</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700" rel="stylesheet">
+      <style>
+         html, body{
+         background-image: url("http://hdqwalls.com/wallpapers/cube-geometry-gradient-4k-79.jpg");
+         font-family: 'Ubuntu', sans-serif;
+         }
+         .back{
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         }
+         .contentbody{
+         background-color: white;
+         }
+         .header{
+         background-color: blue;
+         color: white;
+         height: 80px;
+         display: flex;
+         align-items: center;
+         border-radius: 25px 25px 0px 0px;
+         }
+         .formbody{
+         /* margin-top: 3px; */
+         background-color: white;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container back">
+         <div class="row" style="width: 450px; margin: 5px;">
+            <div class="col">
+               <div class="row contentbody header">
+                  <div class="col " >
+                     <h1 style="text-align: center; margin:0px; padding:0px; font-weight: bold">MAILMAN</h1>
+                     <p style="text-align: center; font-style: italic; color: #eaebed; font-size:13px; margin:0px; padding:0px;">Deliver Attachments Anyone Anytime..</p>
+                  </div>
+               </div>
+               <div class="row formbody">
+                  <div class="col" style="margin-top: 29px;">
+                     <form id="contact-form" action="/users" method="POST" enctype="multipart/form-data">
+                        <!-- <p style="text-align: center; font-style: italic; color: grey; font-size:13px; margin-top:15px">Deliver Attachments Anyone Anytime..</p> -->
+                        <!-- <hr style="border:1px solid lightgray;"> -->
+                        <div class="form-group">
+                           Your Full Name:
+                           <input class="form-control" type="text" name="fname" required="required" data-error="Fullname is required."><br> Recipient's Email:
+                           <input class="form-control" type="email" name="email" required="required" data-error="Email is required."><br> Your Message:
+                           <input class="form-control" type="text" name="message" required="required" data-error="Message is required."><br>
+                           <input class="form-control-file" id="file" type="file" name="avatar" required="required" data-error="File is required."><br>
+                           <input class="form-control-file" id="text" type="file" name="password" required="required" data-error="Password is required."><br>
+
+                           <center>
+                              <button class="btn btn-primary mb-2" type="submit" style="width:50%;height: 50px; font-weight:bold ;">Send File</button>
+                           </center>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
+</html>
